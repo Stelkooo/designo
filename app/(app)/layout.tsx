@@ -1,5 +1,5 @@
 import Header from '@/components/common/header/header.component';
-import './globals.css';
+import '../globals.css';
 import { Jost } from 'next/font/google';
 
 const jost = Jost({ subsets: ['latin'] });
