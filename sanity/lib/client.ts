@@ -2,7 +2,12 @@ import { createClient } from 'next-sanity';
 
 import { apiVersion, dataset, projectId, useCdn } from '../env';
 
-import { Navigation, navigationQuery } from './queries';
+import {
+  DesignTypeLink,
+  Navigation,
+  designTypeLinksQuery,
+  navigationQuery,
+} from './queries';
 
 const client = createClient({
   apiVersion,
@@ -13,6 +18,11 @@ const client = createClient({
 
 export async function getNavigation(): Promise<Navigation[]> {
   if (client) return (await client.fetch(navigationQuery)) || [];
+  return [];
+}
+
+export async function getDesignTypeLinks(): Promise<DesignTypeLink[]> {
+  if (client) return (await client.fetch(designTypeLinksQuery)) || [];
   return [];
 }
 

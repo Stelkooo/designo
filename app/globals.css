@@ -8,6 +8,11 @@
     @apply font-medium;
     @apply text-[2rem]/[36px] md:text-[3rem]/[3rem];
   }
+  h2 {
+    @apply font-medium;
+    @apply text-[28px]/[36px] md:text-[40px]/[48px];
+    @apply tracking-[1.4px] md:tracking-[2px];
+  }
   p {
     @apply text-[1rem]/[26px];
   }
