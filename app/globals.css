@@ -13,6 +13,13 @@
     @apply text-[28px]/[36px] md:text-[40px]/[48px];
     @apply tracking-[1.4px] md:tracking-[2px];
   }
+  h3 {
+    @apply text-black;
+    @apply uppercase;
+    @apply font-medium;
+    @apply text-[20px]/[26px];
+    @apply tracking-[5px];
+  }
   p {
     @apply text-[1rem]/[26px];
   }

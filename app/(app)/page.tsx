@@ -1,5 +1,6 @@
 import DesignTypeNav from '@/components/common/design-type-nav/design-type-nav.component';
 import Hero from '@/components/main/hero/hero.component';
+import Values from '@/components/main/values/values.component';
 
 export default function Home() {
   return (
@@ -7,6 +8,8 @@ export default function Home() {
       <Hero />
       {/* @ts-expect-error Async Server Component */}
       <DesignTypeNav />
+      {/* @ts-expect-error Async Server Component */}
+      <Values />
     </main>
   );
 }

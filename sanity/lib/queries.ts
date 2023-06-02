@@ -32,6 +32,22 @@ export type DesignTypeLink = {
   largeImage?: Image;
 };
 
+export const valuesQuery = groq`
+  *[_type == "value"] | order(_createdAt asc) {
+    _id,
+    title,
+    description,
+    image,
+  }
+`;
+
+export type Value = {
+  _id: string;
+  title: string;
+  description: string;
+  image: Image;
+};
+
 export type Image = {
   _type: 'image';
   asset: Reference;

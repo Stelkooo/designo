@@ -5,8 +5,10 @@ import { apiVersion, dataset, projectId, useCdn } from '../env';
 import {
   DesignTypeLink,
   Navigation,
+  Value,
   designTypeLinksQuery,
   navigationQuery,
+  valuesQuery,
 } from './queries';
 
 const client = createClient({
@@ -23,6 +25,11 @@ export async function getNavigation(): Promise<Navigation[]> {
 
 export async function getDesignTypeLinks(): Promise<DesignTypeLink[]> {
   if (client) return (await client.fetch(designTypeLinksQuery)) || [];
+  return [];
+}
+
+export async function getValues(): Promise<Value[]> {
+  if (client) return (await client.fetch(valuesQuery)) || [];
   return [];
 }
 
