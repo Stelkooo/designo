@@ -1,6 +1,8 @@
-import Header from '@/components/common/header/header.component';
-import '../globals.css';
 import { Jost } from 'next/font/google';
+
+import '../globals.css';
+
+import Header from '@/components/common/header/header.component';
 
 const jost = Jost({ subsets: ['latin'] });
 
@@ -17,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-full">
       <body className={`${jost.className} min-h-full`} id="root">
+        {/* @ts-expect-error Async Server Component */}
         <Header />
         {children}
         <div id="portal" />
