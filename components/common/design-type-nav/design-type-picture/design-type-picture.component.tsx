@@ -17,7 +17,7 @@ export default function DesignTypePicture({ item, index }: Props) {
             ? urlForImage(item.largeImage).url()
             : urlForImage(item.images.desktop).url()
         }
-        media="(min-width: 1024px)"
+        media="(min-width: 1280px)"
       />
       <source
         srcSet={urlForImage(item.images.tablet).url()}
