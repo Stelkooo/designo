@@ -8,4 +8,26 @@
     @apply font-medium;
     @apply text-[2rem]/[36px] md:text-[3rem]/[3rem];
   }
+  p {
+    @apply text-[1rem]/[26px];
+  }
+}
+
+.main-hero {
+  background-image: url('/assets/home/desktop/bg-pattern-hero-home.svg');
+  background-repeat: no-repeat;
+  background-size: 640px 640px;
+  background-position: left 0 top 102px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-hero {
+    background-position: left 170px top 102px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main-hero {
+    background-position: right 0 top 0;
+  }
 }

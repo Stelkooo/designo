@@ -20,6 +20,9 @@ export default {
         '2xl': '689px',
         '6xl': '1111px',
       },
+      fontSize: {
+        base: ['16px', '26px'],
+      },
     },
   },
   plugins: [],

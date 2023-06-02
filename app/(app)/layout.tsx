@@ -18,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="min-h-full">
-      <body className={`${jost.className} min-h-full`} id="root">
+      <body
+        className={`${jost.className} min-h-full overflow-hidden`}
+        id="root"
+      >
         {/* @ts-expect-error Async Server Component */}
         <Header />
         {children}
