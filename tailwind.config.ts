@@ -15,6 +15,11 @@ export default {
         'dark-grey': '#333136',
         'light-grey': '#F1F3F5',
       },
+      maxWidth: {
+        xs: '327px',
+        '2xl': '689px',
+        '6xl': '1111px',
+      },
     },
   },
   plugins: [],

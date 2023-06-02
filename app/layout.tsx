@@ -1,3 +1,4 @@
+import Header from '@/components/common/header/header.component';
 import './globals.css';
 import { Jost } from 'next/font/google';
 
@@ -14,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={jost.className}>{children}</body>
+    <html lang="en" className="min-h-full">
+      <body className={`${jost.className} min-h-full`} id="root">
+        <Header />
+        {children}
+        <div id="portal" />
+      </body>
     </html>
   );
 }
