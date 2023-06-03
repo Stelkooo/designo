@@ -1,25 +1,10 @@
-import type { GetStaticPaths } from 'next';
-
-import {
-  getDesignType,
-  getDesignTypeSlugs,
-  getDesigns,
-} from '@/sanity/lib/client';
+import { getDesignType, getDesigns } from '@/sanity/lib/client';
 
 import Heading from '@/components/design/heading/heading.component';
 import DesignCard from '@/components/design/design-card/design-card.component';
+import DesignTypeNav from '@/components/common/design-type-nav/design-type-nav.component';
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = await getDesignTypeSlugs();
-  const paths = slugs.map(({ slug }) => {
-    return {
-      params: { slug },
-    };
-  });
-  return { paths, fallback: false };
-};
-
-export default async function Design({
+export default async function Page({
   params: { slug },
 }: {
   params: { slug: string };
@@ -34,6 +19,7 @@ export default async function Design({
           <DesignCard design={item} key={item._id} />
         ))}
       </section>
+      <DesignTypeNav slug={slug} />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import LogoDark from 'public/assets/shared/desktop/logo-dark.png';
 
@@ -12,7 +13,9 @@ async function Header() {
   return (
     <header>
       <div className="flex items-center justify-between px-6 py-8 md:mx-auto md:max-w-2xl md:px-0 md:py-16 xl:max-w-6xl">
-        <Image src={LogoDark} alt="Designo Logo" width={202} height={27} />
+        <Link href="/">
+          <Image src={LogoDark} alt="Designo Logo" width={202} height={27} />
+        </Link>
         <div className="md:hidden">
           <MobileNav navLinks={navLinks} />
         </div>
