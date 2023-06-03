@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <article className="h-[843px] xl:h-[640px]">
       <div className="main-hero relative h-full overflow-hidden bg-peach md:mx-auto md:max-w-2xl md:rounded-2xl xl:flex xl:max-w-6xl xl:flex-col xl:items-start">
-        <div className="mx-auto my-auto grid max-w-xs justify-items-center gap-y-6 pt-20 text-center md:max-w-xl md:pt-[60px] xl:mx-0 xl:ml-24 xl:justify-items-start xl:gap-y-10 xl:pt-0 xl:text-left">
+        <div className="relative z-10 mx-auto my-auto grid max-w-xs justify-items-center gap-y-6 pt-20 text-center md:max-w-xl md:pt-[60px] xl:mx-0 xl:ml-24 xl:justify-items-start xl:gap-y-10 xl:pt-0 xl:text-left">
           <div className="grid justify-items-center gap-y-6 md:gap-y-8 xl:justify-items-start xl:gap-y-[34px]">
             <h1>Award-winning custom designs and digital branding solutions</h1>
             <p className="text-[15px]/[25px] text-white md:max-w-[445px] md:text-base">

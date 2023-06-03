@@ -4,6 +4,7 @@ import '../globals.css';
 
 import Header from '@/components/common/header/header.component';
 import CTA from '@/components/common/cta/cta.component';
+import Footer from '@/components/common/footer/footer.component';
 
 const jost = Jost({ subsets: ['latin'] });
 
@@ -24,6 +25,8 @@ export default function RootLayout({
         <Header />
         {children}
         <CTA />
+        {/* @ts-expect-error Async Server Component */}
+        <Footer />
         <div id="portal" />
       </body>
     </html>

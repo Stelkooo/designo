@@ -28,7 +28,7 @@ export default function HamburgerMenu({ onClickFunc, navLinks }: Props) {
             </ul>
           </nav>
         </div>
-        <div className="h-screen w-full bg-black bg-opacity-50" />
+        <div className="fixed left-0 top-[91px] z-40 h-screen w-full bg-black bg-opacity-50" />
       </>,
       portalId
     );
