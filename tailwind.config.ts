@@ -27,6 +27,12 @@ export default {
       backgroundPosition: {
         cta: 'right 56% top 49%',
         'cta-tablet': 'right 90% top 50%',
+        about: 'right 0% top 25.5%',
+        'about-tablet': 'left -250% bottom -30%',
+        'about-desktop': 'right 0% bottom 0%',
+        'about-section': 'left 0% top 0%',
+        'about-tablet-section': 'right 10% bottom -23%',
+        'about-desktop-section': 'left 0% bottom 0%',
       },
     },
   },

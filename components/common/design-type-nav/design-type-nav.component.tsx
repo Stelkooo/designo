@@ -12,10 +12,10 @@ async function DesignTypeNav({ slug = undefined }: Props) {
   return (
     <nav>
       <div
-        className={`mx-auto grid max-w-xs grid-rows-[repeat(3,250px)] gap-y-6 md:max-w-2xl md:grid-rows-[repeat(3,200px)] xl:max-w-6xl xl:grid-cols-2 xl:gap-x-8 ${
+        className={`mx-auto grid max-w-xs gap-y-6 md:max-w-2xl xl:max-w-6xl xl:grid-cols-2 xl:gap-x-8 ${
           slug === undefined
-            ? 'xl:grid-rows-[repeat(2,308px)]'
-            : 'xl:grid-rows-[308px]'
+            ? 'grid-rows-[repeat(3,250px)] md:grid-rows-[repeat(3,200px)] xl:grid-rows-[repeat(2,308px)]'
+            : 'grid-rows-[repeat(2,250px)] md:grid-rows-[repeat(2,200px)] xl:grid-rows-[308px]'
         }`}
       >
         {designTypeLinks.map((item, index) =>
