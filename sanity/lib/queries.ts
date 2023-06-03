@@ -48,6 +48,32 @@ export type Value = {
   image: Image;
 };
 
+export const designTypeSlugsQuery = groq`
+  *[_type == "designType"] | order(_createdAt asc) {
+    "slug": slug.current,
+  }
+`;
+
+export type Slug = {
+  slug: string;
+};
+
+export const designTypeQuery = groq`
+  *[_type=="designType" && slug.current==$slug][0] {
+    _id,
+    title,
+    description,
+    bgPattern,
+}
+`;
+
+export type DesignType = {
+  _id: string;
+  title: string;
+  description: string;
+  bgPattern: Image;
+};
+
 export type Image = {
   _type: 'image';
   asset: Reference;

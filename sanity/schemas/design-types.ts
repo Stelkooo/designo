@@ -43,5 +43,11 @@ export default defineType({
       title: 'Large Image',
       type: 'image',
     }),
+    defineField({
+      name: 'bgPattern',
+      title: 'Background Pattern',
+      type: 'image',
+      validation: (rule) => rule.required(),
+    }),
   ],
 });
