@@ -23,6 +23,10 @@ export default {
       fontSize: {
         base: ['16px', '26px'],
       },
+      backgroundPosition: {
+        cta: 'right 56% top 49%',
+        'cta-tablet': 'right 90% top 50%',
+      },
     },
   },
   plugins: [],

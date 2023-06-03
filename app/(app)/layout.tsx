@@ -3,6 +3,7 @@ import { Jost } from 'next/font/google';
 import '../globals.css';
 
 import Header from '@/components/common/header/header.component';
+import CTA from '@/components/common/cta/cta.component';
 
 const jost = Jost({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         {/* @ts-expect-error Async Server Component */}
         <Header />
         {children}
+        <CTA />
         <div id="portal" />
       </body>
     </html>
