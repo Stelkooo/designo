@@ -12,6 +12,7 @@ export default {
         peach: '#E7816B',
         black: '#1D1C1E',
         'light-peach': '#FFAD9B',
+        'lighter-peach': '#FDF3F0',
         'dark-grey': '#333136',
         'light-grey': '#F1F3F5',
       },

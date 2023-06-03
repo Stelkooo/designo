@@ -64,7 +64,7 @@ export const designTypeQuery = groq`
     title,
     description,
     bgPattern,
-}
+  }
 `;
 
 export type DesignType = {
@@ -72,6 +72,22 @@ export type DesignType = {
   title: string;
   description: string;
   bgPattern: Image;
+};
+
+export const designsQuery = groq`
+ *[_type == "design" && type._ref==$ref] | order(_createdAt asc) {
+    _id,
+    title,
+    description,
+    image
+  }
+`;
+
+export type Design = {
+  _id: string;
+  title: string;
+  description: string;
+  image: Image;
 };
 
 export type Image = {

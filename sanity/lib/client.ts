@@ -3,6 +3,7 @@ import { createClient } from 'next-sanity';
 import { apiVersion, dataset, projectId, useCdn } from '../env';
 
 import {
+  Design,
   DesignType,
   DesignTypeLink,
   Navigation,
@@ -11,6 +12,7 @@ import {
   designTypeLinksQuery,
   designTypeQuery,
   designTypeSlugsQuery,
+  designsQuery,
   navigationQuery,
   valuesQuery,
 } from './queries';
@@ -46,6 +48,11 @@ export async function getDesignType(slug: string): Promise<DesignType> {
   if (client)
     return (await client.fetch(designTypeQuery, { slug })) || ({} as any);
   return {} as any;
+}
+
+export async function getDesigns(ref: string): Promise<Design[]> {
+  if (client) return (await client.fetch(designsQuery, { ref })) || [];
+  return [];
 }
 
 export default client;
