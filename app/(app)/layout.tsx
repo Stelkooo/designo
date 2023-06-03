@@ -21,11 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-full">
       <body className={`${jost.className} min-h-full`} id="root">
-        {/* @ts-expect-error Async Server Component */}
         <Header />
         {children}
         <CTA />
-        {/* @ts-expect-error Async Server Component */}
         <Footer />
         <div id="portal" />
       </body>

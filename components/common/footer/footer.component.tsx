@@ -8,7 +8,7 @@ import Nav from '../nav/nav.components';
 import Socials from './socials/socials.component';
 import ContactDetails from './contact-details/contact-details.component';
 
-export default async function Footer() {
+async function Footer() {
   const [navLinks] = await Promise.all([getNavigation()]);
   return (
     <footer className="bg-black py-16">
@@ -31,3 +31,5 @@ export default async function Footer() {
     </footer>
   );
 }
+
+export default Footer as unknown as () => JSX.Element;

@@ -3,7 +3,7 @@ import { getDesignTypeLinks } from '@/sanity/lib/client';
 import DesignTypePicture from './design-type-picture/design-type-picture.component';
 import DesignTypeContent from './design-type-content/design-type-content.component';
 
-export default async function DesignTypeNav() {
+async function DesignTypeNav() {
   const [designTypeLinks] = await Promise.all([getDesignTypeLinks()]);
   return (
     <nav>
@@ -23,3 +23,5 @@ export default async function DesignTypeNav() {
     </nav>
   );
 }
+
+export default DesignTypeNav as unknown as () => JSX.Element;

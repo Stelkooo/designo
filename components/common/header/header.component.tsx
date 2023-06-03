@@ -7,7 +7,7 @@ import { getNavigation } from '@/sanity/lib/client';
 import MobileNav from './mobile-nav/mobile-nav.component';
 import Nav from '../nav/nav.components';
 
-export default async function Header() {
+async function Header() {
   const [navLinks] = await Promise.all([getNavigation()]);
   return (
     <header>
@@ -23,3 +23,5 @@ export default async function Header() {
     </header>
   );
 }
+
+export default Header as unknown as () => JSX.Element;

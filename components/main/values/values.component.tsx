@@ -2,7 +2,7 @@ import { getValues } from '@/sanity/lib/client';
 import urlForImage from '@/sanity/lib/image';
 import Image from 'next/image';
 
-export default async function Values() {
+async function Values() {
   const [values] = await Promise.all([getValues()]);
   return (
     <section>
@@ -29,3 +29,5 @@ export default async function Values() {
     </section>
   );
 }
+
+export default Values as unknown as () => JSX.Element;
