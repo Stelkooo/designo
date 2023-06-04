@@ -1,6 +1,6 @@
 export default function Info() {
   return (
-    <div className="mx-auto grid max-w-xs gap-y-6 text-center text-white md:max-w-xl md:gap-y-8 md:text-left">
+    <div className="mx-auto grid max-w-xs gap-y-6 text-center text-white md:max-w-xl md:gap-y-8 md:text-left xl:content-center">
       <h1>Contact Us</h1>
       <p className="text-[15px]/[25px] md:text-base">
         Ready to take it to the next level? Let&apos;s talk about your project

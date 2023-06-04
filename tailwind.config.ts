@@ -33,6 +33,8 @@ export default {
         'about-section': 'left 0% top 0%',
         'about-tablet-section': 'right 10% bottom -23%',
         'about-desktop-section': 'left 0% bottom 0%',
+        contact: 'left 18% top 0%',
+        'contact-tablet': 'left -240% top -65%',
       },
     },
   },
