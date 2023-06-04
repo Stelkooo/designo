@@ -17,7 +17,9 @@ export default function Hero() {
               experiences. Find out more about our services.
             </p>
           </div>
-          <Button onDark>Learn More</Button>
+          <Button onDark to="about">
+            Learn More
+          </Button>
         </div>
         <Image
           src={ImageHeroPhone}

@@ -1,21 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-import LogoDark from 'public/assets/shared/desktop/logo-dark.png';
-
 import { getNavigation } from '@/sanity/lib/client';
 
 import MobileNav from './mobile-nav/mobile-nav.component';
 import Nav from '../nav/nav.components';
+import Logo from '../logo/logo.component';
 
 async function Header() {
   const [navLinks] = await Promise.all([getNavigation()]);
   return (
     <header>
       <div className="flex items-center justify-between px-6 py-8 md:mx-auto md:max-w-2xl md:px-0 md:py-16 xl:max-w-6xl">
-        <Link href="/">
-          <Image src={LogoDark} alt="Designo Logo" width={202} height={27} />
-        </Link>
+        <Logo isDark />
         <div className="md:hidden">
           <MobileNav navLinks={navLinks} />
         </div>

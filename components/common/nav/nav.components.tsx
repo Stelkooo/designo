@@ -17,7 +17,7 @@ export default function Nav({ navLinks, isDark = false }: Props) {
         {navLinks.map((item) => (
           <li key={item._id}>
             <Link
-              href={item.slug}
+              href={`/${item.slug}`}
               className={`${
                 isDark ? 'decoration-black' : 'decoration-white'
               } decoration-0 underline-offset-8 transition-all hover:underline hover:decoration-1 hover:underline-offset-2`}
