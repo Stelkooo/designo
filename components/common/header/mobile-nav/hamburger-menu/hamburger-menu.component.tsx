@@ -20,7 +20,7 @@ export default function HamburgerMenu({ onClickFunc, navLinks }: Props) {
             <ul className="flex flex-col gap-8 text-[24px]/[25px] uppercase tracking-[2px] text-white">
               {navLinks.map((item) => (
                 <li key={item._id}>
-                  <Link href={item.slug} onClick={onClickFunc}>
+                  <Link href={`/${item.slug}`} onClick={onClickFunc}>
                     {item.title}
                   </Link>
                 </li>
