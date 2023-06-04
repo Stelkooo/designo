@@ -6,6 +6,7 @@ import {
   Design,
   DesignType,
   DesignTypeLink,
+  TLocation,
   Navigation,
   Slug,
   Value,
@@ -13,6 +14,7 @@ import {
   designTypeQuery,
   designTypeSlugsQuery,
   designsQuery,
+  locationsQuery,
   navigationQuery,
   valuesQuery,
 } from './queries';
@@ -52,6 +54,11 @@ export async function getDesignType(slug: string): Promise<DesignType> {
 
 export async function getDesigns(ref: string): Promise<Design[]> {
   if (client) return (await client.fetch(designsQuery, { ref })) || [];
+  return [];
+}
+
+export async function getLocations(): Promise<TLocation[]> {
+  if (client) return (await client.fetch(locationsQuery)) || [];
   return [];
 }
 

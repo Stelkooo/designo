@@ -90,6 +90,37 @@ export type Design = {
   image: Image;
 };
 
+export const locationsQuery = groq`
+  *[_type == "location"] | order(_createdAt asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    office,
+    address,
+    city,
+    telephone,
+    email,
+    coords,
+  }
+`;
+
+export type TLocation = {
+  _id: string;
+  title: string;
+  slug: string;
+  office: string;
+  address: string;
+  city: string;
+  telephone: string;
+  email: string;
+  coords: Coords;
+};
+
+export type Coords = {
+  lat: number;
+  lng: number;
+};
+
 export type Image = {
   _type: 'image';
   asset: Reference;
