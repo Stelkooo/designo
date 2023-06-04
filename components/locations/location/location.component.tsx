@@ -19,9 +19,10 @@ export default function Location({ location, index }: Props) {
       className={`flex flex-col md:gap-6 ${
         index % 2 === 0 ? 'xl:flex-row-reverse' : 'xl:flex-row'
       } xl:gap-8`}
+      id={location.slug}
     >
       <Map coords={location.coords} />
-      <div className="grid h-[394px] place-content-center gap-y-6 bg-lighter-peach text-center md:h-[326px] md:justify-normal md:overflow-hidden md:rounded-2xl md:px-[75px] md:text-left xl:w-full">
+      <div className="grid h-[394px] place-content-center gap-y-6 bg-lighter-peach bg-[url('/assets/shared/desktop/bg-pattern-three-circles.svg')] bg-no-repeat text-center md:h-[326px] md:justify-normal md:overflow-hidden md:rounded-2xl md:bg-left-bottom md:px-[75px] md:text-left xl:w-full">
         <h2 className="text-[2rem] text-peach md:text-[40px]">
           {location.title}
         </h2>
